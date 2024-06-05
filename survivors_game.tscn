@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6mafkfgwy73l"]
+
+[ext_resource type="PackedScene" uid="uid://brwf650pt5jkn" path="res://player.tscn" id="1_n5ddo"]
+[ext_resource type="PackedScene" uid="uid://ccq7nbwu2y7tx" path="res://tree.tscn" id="2_m42r1"]
+[ext_resource type="PackedScene" uid="uid://cyk3wm78y22d1" path="res://mob.tscn" id="3_opok5"]
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -30
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 1996.0
+offset_bottom = 1154.0
+
+[node name="Tree2" parent="." instance=ExtResource("2_m42r1")]
+position = Vector2(673, -357)
+
+[node name="Tree" parent="." instance=ExtResource("2_m42r1")]
+position = Vector2(-591, -364)
+
+[node name="Tree3" parent="." instance=ExtResource("2_m42r1")]
+position = Vector2(-365, 263)
+
+[node name="Player" parent="." instance=ExtResource("1_n5ddo")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Mob" parent="." instance=ExtResource("3_opok5")]
+position = Vector2(622, 220)
